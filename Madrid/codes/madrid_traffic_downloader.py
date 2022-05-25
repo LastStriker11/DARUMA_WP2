@@ -43,7 +43,7 @@ def get_feed():
         resp = requests.get(url, allow_redirects=True)
         root = Xet.fromstring(str(resp.content, 'utf-8'))
         data = traffic_xml2csv(root)
-        data.to_csv('../data/mtd_'+timestr+'.csv', index=False)
+        data.to_csv('../Madrid_data/detector_data/mtd_'+timestr+'.csv', index=False)
     except:
         print("Oops!  That was no valid data. Try again...\n\n" + resp.content)
 
