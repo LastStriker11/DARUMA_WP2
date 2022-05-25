@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 """
-@author: Qing-Long Lu
+@author: LQL
 """
 
 import pandas as pd
