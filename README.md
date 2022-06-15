@@ -33,18 +33,41 @@ Besides, the real-time data has two kinds of detectors: 1) roads within Madrid; 
 - The loop detector data seems to have some problems:
 
   - For the same detector: different time intervals (5 min) have the same value in volume, occupancy and speed.
-
   - At the same time interval, different detectors have the same volume, occupancy and speed.
-
   - The collection dates are not continuous.
   - In *Detekto_measurements_1*: one-week data are available in April, June and September of 2019;  five-day data are available in March, May, Jun and November of 2020; five-day data in June of 2021.
   - *Detekto_measurements_2* only adds the data of 'D701.1', so we do not use it.
+
+## 3. TomTom data
+
+### 3.1 Budapest
+
+There are two kinds of TomTom data, one is OD matrix which does not need further processing (in the folders start with *od_*, e.g., *od_20220307_20220313*), and another one is the link-based data which measuring the average travel time and speed, and aggregated counts of FCD vehicles (in the folders start with *district*, e.g., *district11_20220103_20220109*).
+
+Regarding the second dataset:
+
+- creationTime
+- network
+  - segmentResults: includes the data of 3002 link segments, each segment includes the following data.
+    - distance: length of the link
+    - newSegmentId
+    - shape
+    - segmentTimeResults: includes the average speed, travel time, and number of FCD vehicles from 4:00-10:00 with a 15-min interval (24 intervals in total).
+- timeSets
+  - ID from 2 to 25. 2 represents the time 4:00-4:15, and 25 represents 9:45-10:00.
+
+After processing, we will get the data of 3002 links within the district 11 of Budapest, including:
+
+- The link related information (`Budapest/codes/results/TomTom_link_info.csv`), including ID, speed limit and length
+- average speed of probes (one csv file each date, in `Budapest/codes/results/TomTom`)
+- number of probes passing through (one csv file each date)
+- average travel time
 
 --------------------
 
 **Working diary**
 
-- *23.05.2022*: processing codes for loop detector data from Madrid
+- *23.05.2022*: processing codes for loop detector data from Madrid.
 - *20.05.2022*: loop detector data downloader for downloading the public detector data of Madrid.
 - *18.05.2022*: preprocessing codes for loop detector data (from Kyoto and Budapest)
 - *03.05.2022*: GPT data processing and visualization codes.
