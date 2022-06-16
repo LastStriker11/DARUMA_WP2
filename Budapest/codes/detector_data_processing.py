@@ -1,5 +1,10 @@
 # -*- coding: utf-8 -*-
 """
+This program is used to process the detector data from Budapest.
+The user need to provide the data path and specify the time interval.
+The outputs are saved in 'results/', including the speed tensor, occupancy tensor and traffic counts tensor.
+The information of detectors is saved in a separate csv file: 'results/detector_order.csv'.
+
 @author: LQL
 """
 import pandas as pd

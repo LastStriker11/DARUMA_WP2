@@ -1,8 +1,12 @@
 # -*- coding: utf-8 -*-
 """
-Created on Wed Jun 15 17:33:01 2022
+This pragram is used to process the TomTom link-based data (.json) from Budapest.
+The user need to provide the path of data folder.
+The outputs are saved in 'results/TomTom/', including the average speed,
+average travel time and the number of probe vehicles.
+The information of links is saved in a separate csv file: 'results/TomTom_link_info.csv'
 
-@author: lasts
+@author: LOL
 """
 import pandas as pd
 import numpy as np
@@ -11,6 +15,7 @@ import json
 #%%
 data_folder = '../Budapest_data/TomTom_FCD/district11_20220103_20220109/'
 list_data = [f for f in os.listdir(data_folder) if f.endswith('.json')]  # please have a look at the order of the files
+#%%
 for file in list_data:
     with open(data_folder+file) as json_data:
         data = json.load(json_data) # load the json data

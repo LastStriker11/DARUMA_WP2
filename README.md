@@ -1,4 +1,4 @@
-# DARUMA WP2 [TUM]
+# DARUMA WP2
 
 *Date: 03.05.2022*
 
@@ -43,6 +43,11 @@ Besides, the real-time data has two kinds of detectors: 1) roads within Madrid; 
 ### 3.1 Budapest
 
 There are two kinds of TomTom data, one is OD matrix which does not need further processing (in the folders start with *od_*, e.g., *od_20220307_20220313*), and another one is the link-based data which measuring the average travel time and speed, and aggregated counts of FCD vehicles (in the folders start with *district*, e.g., *district11_20220103_20220109*).
+
+Regarding the first dataset:
+
+- Each file contains the hourly OD data within 7-10 and 15-18 of several days. So, some data are duplicates. For example, in folder *od_20220307_20220313*, only two unique files.
+- Need to confirm with partners from Budapest.
 
 Regarding the second dataset:
 
