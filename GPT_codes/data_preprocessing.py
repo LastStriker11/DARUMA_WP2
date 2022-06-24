@@ -11,6 +11,7 @@ import pickle
 import datetime
 #%%
 DATA_FOLDER = '../output/' # path to the raw GPT data
+RESULT_FOLDER = 'results/'
 #%%
 def data_info_stat():
     """
@@ -242,7 +243,7 @@ if __name__ == '__main__':
     # processing real-time data
     data_rt = gpt_real_time(info_file, index_common)
     
-    f = open('results/data_processed.pckl', 'wb')
+    f = open(RESULT_FOLDER+'data_processed.pckl', 'wb')
     pickle.dump([data_all,data_days,data_rt,index_common,info_file,info_venue], f)
     f.close()
     
