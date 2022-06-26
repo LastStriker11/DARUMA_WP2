@@ -9,7 +9,7 @@ These two datasets can be connected based on 'user.id' if needed.
 import pandas as pd
 import os
 #%%
-data_folder = '../Kyoto_data/twitter/with_geo_info/'
+data_folder = '../Kyoto/Kyoto_data/twitter/with_geo_info/'
 result_folder = 'results/'
 #%%
 list_data = [f for f in os.listdir(data_folder) if f.endswith('.csv')]

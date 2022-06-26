@@ -6,7 +6,7 @@
 
 A repository of preprocessing and previsualization codes for WP2 of the DARUMA project.
 
-Codes for datasets from different cities can be found in the respective folders. Since all GPT data have the same format, so the codes for GPT data are shared in a public folder *GPT_codes* including a preprocessing script and a visualization notebook. In general, each dataset will be accompanied by a preprocessing script and a visualization notebook.
+Codes for datasets from different cities can be found in the respective folders. Since all GPT data have the same format, so the codes for GPT data are shared in a public folder *GPT_codes* including a preprocessing script and a visualization notebook.
 
 --------
 ## 1. Data in common
@@ -93,14 +93,15 @@ Regarding the "stay" dataset:
 
 ### 3.2 Wi-Fi data
 
-
+Multiple values are available for each location at a single timestamp. <font color='red'>I am not sure if need to average them.</font>
 
 --------------------
 
 **Working diary**
 
-- *10.06.2022*： codes for processing Budapest TomTom data.
+- *24.06.2022*: processing codes for Kyoto docomo data.
+- *10.06.2022*: processing codes Budapest TomTom data.
 - *23.05.2022*: processing codes for loop detector data from Madrid.
 - *20.05.2022*: loop detector data downloader for downloading the public detector data of Madrid.
 - *18.05.2022*: preprocessing codes for loop detector data (from Kyoto and Budapest)
-- *03.05.2022*: GPT data processing and visualization codes.
+- *03.05.2022*: uploading GPT data processing and visualization codes.
