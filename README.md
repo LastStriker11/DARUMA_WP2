@@ -77,7 +77,7 @@ After processing, we will get the data of 3002 links within the district 11 of B
 
 ## 3. Kyoto data
 ### 3.1 docomo data
-It contains two datasets. One is for OD flows, and another one is for population. Both datasets will be converted to tensor format with the shape/dimension (# time intervals, # OD pairs,  # variables) by running `Kyoto/codes/docomo_data_processing.py`. But, the "stay" dataset needs an additional area ID table for this purpose.
+It contains two datasets. One is for OD flows, and another one is for population. Both datasets will be converted to tensor format with the shape/dimension (# OD pairs,  # time intervals, # days) by running `Kyoto/codes/docomo_data_processing.py`. But, the "stay" dataset needs an additional area ID table for this purpose.
 
 Regarding the "OD" dataset:
 
